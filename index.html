@@ -26,7 +26,27 @@
 
 </head>
 <style>
+/* Default transparent header */
+/* Default transparent */
+/* Default transparent */
+header.header-light {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: transparent;
+    transition: all 0.4s ease;
+}
 
+/* Scroll ke baad background show */
+header.header-light.scrolled {
+    background: #ffffff;   /* Apna color yaha change kar sakte ho */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+header.header-light.scrolled #mainmenu > li > a {
+    color: black;
+}
 </style>
 <body>
 
@@ -39,7 +59,8 @@
                             <!-- logo begin -->
                             <div id="logo">
                                 <a href="index.html">
-                                    <img class="logo-main" src="images/WhatsApp_Image_2026-02-14_at_7.12.12_PM-removebg-preview.png" alt=""  height="60px" 
+                                    <img class="logo-main"  style="padding-top: 10px;"
+                                     src="images/WhatsApp_Image_2026-02-14_at_7.12.12_PM-removebg-preview.png" alt=""  height="100px" 
                                     >
                                     <img class="logo-scroll" src="images/WhatsApp_Image_2026-02-14_at_7.12.12_PM-removebg-preview.png" alt=""  height="60px" >
                                     <img class="logo-mobile"src="images/WhatsApp_Image_2026-02-14_at_7.12.12_PM-removebg-preview.png" alt=""  height="60px" >
@@ -99,7 +120,7 @@
         <div id="de-loader"></div>
         <!-- page preloader close -->
         
-        <section class="text-light no-top no-bottom relative rounded-1 overflow-hidden mt-80 mt-sm-50 mx-2">
+        <section class="text-light no-top no-bottom relative overflow-hidden   ">
             <div class="mh-800">
                 <div class="abs bottom-10 w-100 p-5 mt-3 z-3">
                     <div class="container-fluid">
@@ -120,14 +141,14 @@
                   <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide text-light">
-                        <div class="swiper-inner" data-bgimage="url(images/3.webp)">
+                        <div class="swiper-inner" data-bgimage="url(images/banner.png)">
                             <div class="sw-overlay op-6"></div>
                         </div>
                     </div>
 
                     <!-- Slides -->
                     <div class="swiper-slide text-light">
-                        <div class="swiper-inner" data-bgimage="url(images/4.webp)">
+                        <div class="swiper-inner" data-bgimage="url(images/banner2.png)">
                             <div class="sw-overlay op-6"></div>
                         </div>
                     </div>
@@ -271,7 +292,7 @@
         </section>
 
 
-        <section class="text-light jarallax mx-2 rounded-1 overflow-hidden">
+        <section class="text-light jarallax mx-2  overflow-hidden">
             <img src="images/1.webp" class="jarallax-img" alt="">
             <div class="sw-overlay op-6"></div>
             <div class="container relative z-2">
@@ -803,7 +824,7 @@
 
     </main>
     
-    <footer class="text-light section-dark m-2 mt-0 rounded-1">
+    <footer class="text-light section-dark m-2 mt-0 ">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-md-12">
@@ -844,7 +865,28 @@
    
 
 </script>
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header.header-light");
 
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header.header-light");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
     <!-- Javascript Files
     ================================================== -->
    <!-- Swiper JS -->

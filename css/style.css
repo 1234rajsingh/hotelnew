@@ -757,7 +757,7 @@ header.header-light #mainmenu a {
 }
 
 .header-light #mainmenu>li>a {
-  color: var(--heading-font-color);
+  color: white;
 }
 
 #mainmenu li li {
@@ -1353,9 +1353,9 @@ header.header-mobile .logo-2 {
   display: inline-block;
 }
 
-header.header-mobile.header-light {
+/* header.header-mobile.header-light {
   background: #fff;
-}
+} */
 
 header.header-mobile #mainmenu ul {
   padding: 0;
@@ -3425,7 +3425,7 @@ footer.footer-light h5 {
   margin-top: 0;
   font-family: var(--heading-font);
   font-weight: var(--heading-font-weight);
-  color: var(--heading-font-color);
+  color: #caa05c;
   text-transform: var(--heading-text-transform);
 }
 
@@ -11344,10 +11344,10 @@ img {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-
+/* 
   header.header-light.header-mobile #mainmenu a.menu-item{
     color:var(--heading-font-color);
-  }
+  } */
 
   header.header-mobile #mainmenu a.menu-item:hover {
     background: none;
